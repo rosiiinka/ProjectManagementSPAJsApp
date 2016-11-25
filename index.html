@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Manager</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+                    <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+                    <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <!--Login System-->
+            <div class="col-sm-4" style="background-color:#E84C3D;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pr-wrap">
+                                <div class="pass-reset">
+                                    <label>
+                                        Enter the email you signed up with</label>
+                                    <input type="email" placeholder="Email" />
+                                    <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <h1 style="color: whitesmoke">Welcome to our site</h1>
+                                <br><br><br><br>
+
+                                <form class="login">
+                                    <p class="form-title">
+                                        Sign In</p>
+                                    <input id="lgnUsrName" type="text" placeholder="Username" />
+                                    <input id="lgnPass" type="password" placeholder="Password" />
+                                    <input id="btnLogin" type="button" value="Sign In"  class="btn btn-success btn-sm" />
+                                    <div class="remember-forgot">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        Remember Me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 forgot-pass-content">
+                                                <a id="lnkCreate" href='#'class="forgot-pass">Create a new account</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form class="create" style="display: none">
+                                    <p class="form-title">
+                                        Create new account</p>
+                                    <input id="crtUsrName" type="text" placeholder="Username" />
+                                    <input id="crtPass" type="password" placeholder="Password" />
+                                    <input id="btnCreate" type="button" value="Create" class="btn btn-success btn-sm" />
+                                    <div class="remember-forgot">
+                                        <div class="row">
+                                            <div class="col-md-6 forgot-pass-content">
+                                                <a href='#' id="lnkLogin" class="forgot-pass">Sign in</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Login System-->
+                </div>
+            </div>
+
+            </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="libs/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="libs/bootstrap.min.js"></script>
+    <script>
+        showHideCreateForm();
+        showHideLoginForm();
+        createUser();
+        LoginUser();
+        function showHideCreateForm() {
+
+            $( "#lnkCreate" ).on("click",function() {
+                $(".create").css("display", "block");
+                $(".login").css("display", "none");
+            });
+        }
+        function showHideLoginForm() {
+
+            $( "#lnkLogin" ).on("click",function() {
+                $(".create").css("display", "none");
+                $(".login").css("display", "block");
+            });
+        }
+        function createUser() {
+            $( "#btnCreate" ).click(function() {
+
+                const kinveyBaseUrl = "https://baas.kinvey.com/";
+                const kinveyAppKey = "kid_BkAHB6bGg";
+                const kinveyAppSecret =
+                        "29dafd5b355d416b83c0862501ff9aa5";
+                const kinveyAppAuthHeaders = {
+                    'Authorization': "Basic " +
+                    btoa(kinveyAppKey + ":" + kinveyAppSecret),
+                };
+
+                let userData = {
+                    username: $('#crtUsrName').val(),
+                    password: $('#crtPass').val()
+                };
+                $.ajax({
+                    method: "POST",
+                    url: kinveyBaseUrl + "user/" + kinveyAppKey + "/",
+                    headers: kinveyAppAuthHeaders,
+                    data: userData,
+                    success: function () {
+                        alert('success');
+                    },
+                    error: function (err) {
+                        alert('fuck you'+err);
+                    }
+                });
+
+
+
+            });
+        }
+
+        function LoginUser() {
+
+            $("#btnLogin").click(function () {
+                const kinveyBaseUrl = "https://baas.kinvey.com/";
+                const kinveyAppKey = "kid_BkAHB6bGg";
+                const kinveyAppSecret =
+                        "29dafd5b355d416b83c0862501ff9aa5";
+                const kinveyAppAuthHeaders = {
+                    'Authorization': "Basic " +
+                    btoa(kinveyAppKey + ":" + kinveyAppSecret),
+                };
+                let userData = {
+                    username: $('#lgnUsrName').val(),
+                    password: $('#lgnPass').val()
+                };
+                $.ajax({
+                    method: "POST",
+                    url: kinveyBaseUrl + "user/" + kinveyAppKey + "/login",
+                    headers: kinveyAppAuthHeaders,
+                    data: userData,
+                    success: function () {
+                        alert('success')
+                        $(".create").css("display", "none");
+                        $(".login").css("display", "none");
+                    },
+                    error: function (err) {
+                        alert('fuck you'+err);
+                    }
+
+                });
+
+
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html>
