@@ -10,6 +10,7 @@ import Login from './components/Login/LoginPage';
 import Register from './components/Register/RegisterPage';
 import Logout from './components/Logout/LogoutPage';
 import Contacts from './components/Contacts/ContactsPage'
+import PJM from './components/PJMApp/PJM'
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
             <IndexRoute component={HomePage}/>
             <Route path="about" component={About}/>
             <Route path="contacts" component={Contacts}/>
+            <Route path="pjm" component={PJM}/>
             <Route path="login" component={Login}/>
             <Route path="register" component={Register}/>
             <Route path="logout" component={Logout}/>
