@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import LoginForm from './LoginForm';
 import {login} from '../../models/user';
 
+
 export default class LoginPage extends Component {
     constructor(props) {
         super(props);
@@ -48,7 +49,6 @@ export default class LoginPage extends Component {
     render() {
         return (
             <div>
-                <span>Login Page</span>
                 <LoginForm
                     username={this.state.username}
                     password={this.state.password}

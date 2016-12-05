@@ -1,0 +1,10 @@
+body {
+    width: 100%;
+}
+div{
+    background: none;
+}
+.jumbotron{
+    background-image: url("../../../public/images/home.jpg");
+
+}

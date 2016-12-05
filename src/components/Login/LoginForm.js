@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import "./Login.css"
 
 export default class LoginForm extends Component {
     render() {
         return (
+            <center>
             <form onSubmit={this.props.onSubmitHandler}>
                 <div className="form-group">
                     <label>Username:</label>
@@ -26,8 +28,11 @@ export default class LoginForm extends Component {
                         onChange={this.props.onChangeHandler}
                     />
                 </div>
-                <input className="btn btn-default" type="submit" value="Login" disabled={this.props.submitDisabled}/>
+                <center>
+                    <input className="btn btn-default" type="submit" value="Login" disabled={this.props.submitDisabled}/>
+                </center>
             </form>
+            </center>
         );
     }
 }

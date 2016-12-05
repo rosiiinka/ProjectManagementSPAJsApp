@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './Infobox.css';
+import './Infobox.css';
 import $ from 'jquery';
 import observer from '../../models/observer';
 
