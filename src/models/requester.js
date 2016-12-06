@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
 const kinveyBaseUrl = "https://baas.kinvey.com/";
-const kinveyAppKey = "kid_ry7IR9WMe";
-const kinveyAppSecret = "095bdc1164c24d9d865cfad4086e4357";
+const kinveyAppKey = "kid_BkAHB6bGg";
+const kinveyAppSecret = "29dafd5b355d416b83c0862501ff9aa5";
 
 function makeAuth(type) {
     switch (type) {
@@ -24,8 +24,6 @@ function get(module, uri, auth) {
         headers: kinveyAuthHeaders
     });
 }
-
-
 
 function post(module, uri, data, auth) {
     const kinveyLoginUrl = kinveyBaseUrl + module + "/" + kinveyAppKey + "/" + uri;
@@ -57,14 +55,7 @@ function update(module, uri, data, auth) {
     return $.ajax(request);
 }
 
-function createComment(comment, callback) {
-    let commentData = {
-        comment: comment
-    };
-    post('appdata', 'comments', commentData, 'kinvey')
-       // .then((response) => {
-        //    joinTeam(response._id, callback);
-       // });
-}
 
-export {get, post, update,createComment};
+
+
+export {get, post, update};
