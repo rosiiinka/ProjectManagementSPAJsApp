@@ -25,6 +25,8 @@ function get(module, uri, auth) {
     });
 }
 
+
+
 function post(module, uri, data, auth) {
     const kinveyLoginUrl = kinveyBaseUrl + module + "/" + kinveyAppKey + "/" + uri;
     const kinveyAuthHeaders = makeAuth(auth);
@@ -55,4 +57,14 @@ function update(module, uri, data, auth) {
     return $.ajax(request);
 }
 
-export {get, post, update};
+function createComment(comment, callback) {
+    let commentData = {
+        comment: comment
+    };
+    post('appdata', 'comments', commentData, 'kinvey')
+       // .then((response) => {
+        //    joinTeam(response._id, callback);
+       // });
+}
+
+export {get, post, update,createComment};

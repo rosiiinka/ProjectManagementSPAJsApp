@@ -11,7 +11,7 @@ import Register from './components/Register/RegisterPage';
 import Logout from './components/Logout/LogoutPage';
 import Contacts from './components/Contacts/ContactsPage'
 import PJM from './components/PJMApp/PJM'
-
+import Comments from './components/Comments/CommentsPage'
 
 ReactDOM.render(
     <Router history={browserHistory}>
@@ -20,6 +20,7 @@ ReactDOM.render(
             <Route path="about" component={About}/>
             <Route path="contacts" component={Contacts}/>
             <Route path="pjm" component={PJM}/>
+            <Route path="comments" component={Comments}/>
             <Route path="login" component={Login}/>
             <Route path="register" component={Register}/>
             <Route path="logout" component={Logout}/>

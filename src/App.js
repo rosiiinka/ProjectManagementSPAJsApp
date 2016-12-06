@@ -43,6 +43,7 @@ class App extends Component {
                     <Link to="/" className="btn btn-default" activeClassName="btn btn-default active" onlyActiveOnIndex={true}>Home</Link>
                     <Link to="/about" className="btn btn-default" activeClassName="btn btn-default active">About</Link>
                     <Link to="/pjm" className="btn btn-default" activeClassName="btn btn-default active">PJM</Link>
+                    <Link to="/comments" className="btn btn-default" activeClassName="btn btn-default active">Comments</Link>
                     <Link to="/contacts" className="btn btn-default" activeClassName="btn btn-default active" onlyActiveOnIndex={true}>Contacts</Link>
                     <Link to="/logout" className="btn btn-default" activeClassName="btn btn-default active">Logout</Link>
                 </Navbar>
