@@ -21,7 +21,7 @@ export default class CommentsForm extends Component {
                         onChange={this.props.onChangeHandler}
                     />
                 </div>
-                <input className="btncom" type="submit" value="Submit changes" disabled={this.props.submitDisabled}/>
+                <input className="btncom" type="submit" value="Submit comment"/>
             </form>
             </center>
         );

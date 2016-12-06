@@ -15,6 +15,7 @@ export default class RegisterForm extends Component {
                         value={this.props.username}
                         disabled={this.props.submitDisabled}
                         onChange={this.props.onChangeHandler}
+                        required
                     />
                 </div>
                 <div className="form-group">
