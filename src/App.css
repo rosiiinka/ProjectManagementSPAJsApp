@@ -28,6 +28,14 @@
         transform: rotate(360deg);
     }
 }
+.navigation.fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.btn{
+    font-size: 20px;
+}
 
 .btn btn-default:hover{
     color: #888888;
@@ -37,4 +45,12 @@
 }
 :hover{
     color: blue;
+}
+.btn btn-default{
+    font-size: 20px;
+    color: white;
+}
+.btn btn-default active{
+    font-size: 20px;
+    color: white;
 }

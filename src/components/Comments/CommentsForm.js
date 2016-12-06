@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import "./Comments.css"
 
 export default class CommentsForm extends Component {
 
@@ -8,6 +8,7 @@ export default class CommentsForm extends Component {
 
     render() {
         return (
+            <center>
             <form onSubmit={this.props.onSubmitHandler}>
 
                 <div className="form-group">
@@ -20,8 +21,9 @@ export default class CommentsForm extends Component {
                         onChange={this.props.onChangeHandler}
                     />
                 </div>
-                <input className="btn btn-default" type="submit" value="Submit changes" disabled={this.props.submitDisabled}/>
+                <input className="btncom" type="submit" value="Submit changes" disabled={this.props.submitDisabled}/>
             </form>
+            </center>
         );
     }
 }

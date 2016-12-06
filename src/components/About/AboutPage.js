@@ -6,6 +6,7 @@ export default class AboutPage extends Component {
         return (
             <div>
                 <p>
+                    <center><span className="about">ABOUT US</span></center>
                     <h1> Faster and easier planning and better work management</h1>
                     Tired of overdue tasks and clumsy excel and spreadsheet? Then project scheduling with Easy Gantt is for you.
                     It will make planning easier and help with project visualization.

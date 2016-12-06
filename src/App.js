@@ -29,6 +29,7 @@ class App extends Component {
         let navbar = {};
         if (!this.state.loggedIn) {
             navbar = (
+                <div className="navigation">
                     <Navbar>
                         <Link to="/" className="btn btn-default" activeClassName="btn btn-default active" onlyActiveOnIndex={true}>Home</Link>
                         <Link to="/about" className="btn btn-default" activeClassName="btn btn-default active">About</Link>
@@ -36,9 +37,11 @@ class App extends Component {
                         <Link to="/login" className="btn btn-default" activeClassName="btn btn-default active">Login</Link>
                         <Link to="/register" className="btn btn-default" activeClassName="btn btn-default active">Register</Link>
                     </Navbar>
+                </div>
                 );
         } else {
             navbar = (
+                <div className="navigation">
                 <Navbar>
                     <Link to="/" className="btn btn-default" activeClassName="btn btn-default active" onlyActiveOnIndex={true}>Home</Link>
                     <Link to="/about" className="btn btn-default" activeClassName="btn btn-default active">About</Link>
@@ -47,6 +50,7 @@ class App extends Component {
                     <Link to="/contacts" className="btn btn-default" activeClassName="btn btn-default active" onlyActiveOnIndex={true}>Contacts</Link>
                     <Link to="/logout" className="btn btn-default" activeClassName="btn btn-default active">Logout</Link>
                 </Navbar>
+                </div>
             );
         }
 
