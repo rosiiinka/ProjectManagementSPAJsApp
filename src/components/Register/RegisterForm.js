@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./Register.css"
 
 export default class RegisterForm extends Component {
     render() {
@@ -39,7 +40,7 @@ export default class RegisterForm extends Component {
                     />
                 </div>
                 <center>
-                    <input className="btn btn-default" type="submit" value="Register" disabled={this.props.submitDisabled}/>
+                    <input className="btnregister" type="submit" value="Register" disabled={this.props.submitDisabled}/>
                 </center>
             </form>
             </center>

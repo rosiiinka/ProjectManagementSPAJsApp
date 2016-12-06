@@ -1,16 +1,21 @@
 import React, {Component} from 'react';
+import "./Contacts.css"
 
 export default class ContactsPage extends Component {
     render() {
         return (
-            <div>
+            <center>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.749643484409!2d23.348494815075707!3d42.66666047916748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cb55c36753%3A0xbde203f1e5db85d1!2z0YPQuy4g4oCe0KLQuNC90YLRj9Cy0LDigJwgMTUtMTcsIDExMTMg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1480789609402" width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
+                    <img src="images/map.png"/>
+                    <br/>
+                    <p align="left"><a href="https://www.google.bg/maps/place/%D1%83%D0%BB.+%E2%80%9E%D0%A2%D0%B8%D0%BD%D1%82%D1%8F%D0%B2%D0%B0%E2%80%9C+15-17,+1113+%D0%A1%D0%BE%D1%84%D0%B8%D1%8F/@42.6666605,23.3484948,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85cb55c36753:0xbde203f1e5db85d1!8m2!3d42.6666605!4d23.3506835" target="_blank" class="style1" rel="nofollow">Вижте по-голяма карта</a></p>
+                    <br/><br/><br/>
+                    <img src = "images/tel.png" width={"50px"} height={"50px"}/>   Tel:0887512984
+                    <br/><br/>
+                    <strong><a href="https://www.facebook.com/Taakbeheer/" target="_blank" class="style1" rel="nofollow">  <img src="images/fb.png" width="84" height="75" /></a></strong>
+
                 </div>
-                <div>
-                    Tel:0883485604
-                </div>
-            </div>
+            </center>
         );
     }
 }

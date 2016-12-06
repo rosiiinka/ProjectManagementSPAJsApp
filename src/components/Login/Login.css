@@ -5,5 +5,14 @@ form{
     color: black;
     text-align: left;
     align: center;
+    padding-bottom: 30px;
 }
 
+.btnlogin{
+    width: 100px;
+    height: 50px;
+    background-color: #222222;
+    border-color: black ;
+    color: white;
+
+}

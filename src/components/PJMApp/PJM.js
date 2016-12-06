@@ -7,7 +7,7 @@ export default class PJM extends Component {
             <div>
                 <table>
                     <tr>
-                        <th>Tasks <button onClick={this.addTask}>Add task</button>
+                        <th>Tasks <button className="btntask" onClick={this.addTask}>Add task</button>
                         </th>
                     </tr>
                     <tr>

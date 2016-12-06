@@ -7,7 +7,7 @@ export default class LoginForm extends Component {
             <center>
             <form onSubmit={this.props.onSubmitHandler}>
                 <div className="form-group">
-                    <label>Username:</label>
+                    <a name="username" id="username"></a><label>Username:</label>
                     <input
                         className="form-control"
                         type="text"
@@ -29,7 +29,7 @@ export default class LoginForm extends Component {
                     />
                 </div>
                 <center>
-                    <input className="btn btn-default" type="submit" value="Login" disabled={this.props.submitDisabled}/>
+                    <input className="btnlogin" type="submit" value="Login" disabled={this.props.submitDisabled}/>
                 </center>
             </form>
             </center>
