@@ -7,7 +7,7 @@ class TableForm extends React.Component {
 
     render(){
         return(
-            <div>
+            <div><center>
                 <form onSubmit={this.props.onSubmitHandler}>
                     <div className="form-group">
                         <label>Task Name</label>
@@ -44,8 +44,8 @@ class TableForm extends React.Component {
                     </div><center>
                     <input className="btntask" type="submit" value="Create Task" disabled={this.props.submitDisabled}/>
                 </center>
-                </form>           
-
+                </form>
+            </center>
 
             </div>
         )
