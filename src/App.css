@@ -43,9 +43,7 @@
 .btn btn-default active:hover {
     color: #888888;
 }
-:hover{
-    color: blue;
-}
+
 .btn btn-default{
     font-size: 20px;
     color: white;

@@ -27,6 +27,7 @@ export default class RegisterForm extends Component {
                         value={this.props.password}
                         disabled={this.props.submitDisabled}
                         onChange={this.props.onChangeHandler}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -38,6 +39,7 @@ export default class RegisterForm extends Component {
                         value={this.props.repeat}
                         disabled={this.props.submitDisabled}
                         onChange={this.props.onChangeHandler}
+                        required
                     />
                 </div>
                 <center>

@@ -41,8 +41,9 @@ class TableForm extends React.Component {
                             disabled={this.props.submitDisabled}
                             onChange={this.props.onChangeHandler}
                         />
-                    </div>
-                    <input className="btn btn-default" type="submit" value="Create Task" disabled={this.props.submitDisabled}/>
+                    </div><center>
+                    <input className="btntask" type="submit" value="Create Task" disabled={this.props.submitDisabled}/>
+                </center>
                 </form>           
 
 
@@ -127,9 +128,9 @@ export default class PJM extends Component {
                     <tbody>
                         <tr>
                             <th>
-                                Task
-                                <button onClick={this.addTask.bind(this)}>Add Task</button>
-
+                                
+                               <center> <button className="btnaddtask" onClick={this.addTask.bind(this)}>Add Task</button>
+                               </center>
                             </th>
 
                             <th>Week 1</th>

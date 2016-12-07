@@ -1,8 +1,15 @@
-span{
+span {
     font-family: arial, sans-serif;
     color: white;
 }
-.welc{
+
+.welc {
     font-size: 25px;
     color: white;
+}
+
+.welc {
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }

@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
 
             <div className="jumbotron">
-                <h1>Task Manager</h1>
+                <h1></h1>
                 <Greeting user={this.props.user}/>
                 {this.props.children}
                 {/*<div className="container">*/}

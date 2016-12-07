@@ -11,7 +11,7 @@ export default class Task extends Component {
                 <th></th>
                 <th></th>
                 <th> </th>
-                <th>  </th>
+                <th> </th>
                 <th> </th>
                 <th> </th>
                 <th> </th>

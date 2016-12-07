@@ -4,6 +4,7 @@ import Navbar from './components/common/Navbar';
 import Infobox from  './components/common/Infobox';
 import {Link} from 'react-router';
 import observer from './models/observer';
+import "./App.css"
 
 class App extends Component {
     constructor(props) {
