@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./PJM.css";
+import "./Gantt.css";
 import tasks from "../../models/tasks";
 import Task from "./Task";
 
@@ -124,6 +124,12 @@ export default class PJM extends Component {
     render() {
         return (
             <div>
+                {this.state.showReply && <TableForm  taskName={this.state.taskName}
+                                                     taskStart={this.state.taskStart}
+                                                     taskEnd = {this.state.taskEnd}
+                                                     submitDisabled={this.state.submitDisabled}
+                                                     onChangeHandler={this.onChangeHandler}
+                                                     onSubmitHandler={this.onSubmitHandler}/>}
                 <table>
                     <tbody>
                         <tr>
@@ -154,12 +160,7 @@ export default class PJM extends Component {
 
                     </tbody>
                 </table>
-                {this.state.showReply && <TableForm  taskName={this.state.taskName}
-                                                     taskStart={this.state.taskStart}
-                                                     taskEnd = {this.state.taskEnd}
-                                                     submitDisabled={this.state.submitDisabled}
-                                                     onChangeHandler={this.onChangeHandler}
-                                                     onSubmitHandler={this.onSubmitHandler}/>}
+
                 
             </div>
 
