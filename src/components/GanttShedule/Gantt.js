@@ -130,7 +130,7 @@ export default class PJM extends Component {
                                                      submitDisabled={this.state.submitDisabled}
                                                      onChangeHandler={this.onChangeHandler}
                                                      onSubmitHandler={this.onSubmitHandler}/>}
-                <table>
+               <center> <table>
                     <tbody>
                         <tr>
                             <th>
@@ -160,8 +160,7 @@ export default class PJM extends Component {
 
                     </tbody>
                 </table>
-
-                
+               </center>
             </div>
 
             

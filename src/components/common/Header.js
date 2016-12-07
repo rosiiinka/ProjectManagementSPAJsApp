@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
 
             <div className="jumbotron">
-                <h1></h1>
+                <img src = "images/logo.png"width={"200"}height={"150"}/>
                 <Greeting user={this.props.user}/>
                 {this.props.children}
                 {/*<div className="container">*/}
